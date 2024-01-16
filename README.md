@@ -25,9 +25,9 @@ Make sure you have the following installed on your machine:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/Tarakkarmakar/acharyaPrasant_courses.git
 
--cd your-repository
+-cd advait-repository
 
 -npm install
 
