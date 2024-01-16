@@ -1,6 +1,6 @@
-# Project Title
+# advait
 
-Brief description or introduction to your project.
+This is the video series page (santbani page) in the website of Acharya prasant ji advait.
 
 ## Tech Stack
 
