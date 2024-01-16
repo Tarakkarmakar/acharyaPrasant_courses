@@ -49,14 +49,14 @@ const SantBani = () => {
     return (
       <div className="flex items-center">
         <FaRegBookmark />
-        <span className="ml-2">Bhag{text}</span>
+        <span className="ml-2">भाग {text}</span>
       </div>
     );
   };
   console.log(mappedCourses, courseSeriesDetails);
   return (
     <div className="w-full text-gray-900 mt-9 font-sans ">
-      <h2 className="font-medium text-[1.3rem]  md:text-[1.7rem] lg:text-[1.7rem]  mb-3">
+      <h2 className="font-medium text-[1.3rem]  md:text-[1.7rem] lg:text-[1.7rem] ml-2 mb-3">
         {courseSeriesDetails ? courseSeriesDetails.title : "Title"}
       </h2>
 
@@ -77,7 +77,7 @@ const SantBani = () => {
       </div>
       <div>
         <h5 className="hidden md:block lg:block ml-2">Share this series:</h5>
-        <div className="hidden md:flex lg:flex w-1/6 justify-between h-[32px]">
+        <div className="hidden md:flex lg:flex w-1/6 justify-between h-[32px] ml-3">
           <div className="flex p-2 hover:cursor-pointer hover:bg-[#3e6fa7] text-[#3e6fa7]  hover:text-white h-full w-[32px] rounded-full justify-center items-center">
             <FaFacebookF className=" text-[28px]" />
           </div>
@@ -98,31 +98,34 @@ const SantBani = () => {
       </h2>
       <div className="border-1 bg-gray-400 h-[1px] w-11/12"></div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-2">
+      <div className="grid grid-cols-1 sm:grid-cols-1 font-semibold gap-3 md:grid-cols-2 lg:grid-cols-3 p-2 ">
         {mappedCourses.map((course, index) => (
-          <div className="p-2 flex flex-col " key={course.courseId}>
+          <div
+            className="p-2 flex flex-col rounded-md border-2 hover:bg-slate-100 hover:cursor-pointer transition duration-300 ease-in-out border-white hover:border-blue-200 "
+            key={course.courseId}
+          >
             <IconWithText text={index + 1} />
             <h3
-              className="font-medium text-[0.9rem] sm:text-[0.8rem] md:text-[1.2rem] 
-            lg:text-[1.2rem] text-gray-800 mt-2"
+              className="font-semibold text-[0.9rem] sm:text-[0.8rem] md:text-[1.2rem] 
+            lg:text-[1rem] text-gray-600 mt-2"
             >
               {course.title}
             </h3>
             <p
-              className="text-gray-500 text-[0.7rem] sm:text-[0.8rem] md:text-[0.9rem] 
-            lg:text-[1rem] "
+              className="text-gray-500 text-[0.5rem] sm:text-[0.6rem] md:text-[0.7rem] 
+            lg:text-[0.8rem] "
             >
               {course.subtitle}
             </p>
             <span
-              className="text-gray-500 mt-2 text-[0.7rem] sm:text-[0.8rem] md:text-[0.9rem] 
-            lg:text-[1rem]"
+              className="text-gray-500 mt-2 text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] 
+            lg:text-[0.9rem]"
             >
               Duration:{course.duration}H
             </span>
             <span
-              className="text-gray-500 text-[0.7rem] sm:text-[0.8rem] md:text-[0.9rem] 
-            lg:text-[1rem]"
+              className="text-gray-500 text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] 
+            lg:text-[0.9rem]"
             >
               Contribution:{course.amount}
             </span>
@@ -133,8 +136,8 @@ const SantBani = () => {
               <span className="m-auto">{course.language}</span>
             </div>
             <div
-              className="text-red-400 text-[0.7rem] sm:text-[0.8rem] md:text-[0.9rem] 
-            lg:text-[1rem]"
+              className="text-[#d24115]  text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] 
+            lg:text-[0.9rem]"
             >
               <button className="mr-3">ADD TO CART |</button>
               <button>ENROLL</button>
