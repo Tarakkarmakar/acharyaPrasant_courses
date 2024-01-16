@@ -15,7 +15,7 @@ const Faq = () => {
   useEffect(() => {
     // Fetch data
     fetch(
-      "https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=english"
+      "https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=hindi"
     )
       .then((response) => response.json())
       .then((data) => setFaqs(data))
@@ -24,7 +24,7 @@ const Faq = () => {
   return (
     <div
       className="flex flex-row justify-around flex-col sm:flex-col md:flex-row lg:flex-row
-     text-gray-700 mb-8"
+     text-gray-700 mb-8 font-medium"
     >
       <div className="flex flex-col w-11/12 sm:w-10/12 md:w-3/12 lg:w-3/12 p-5">
         <h2>FAQs</h2>
@@ -34,7 +34,10 @@ const Faq = () => {
         </p>
       </div>
       <div className="flex flex-col w-11/12 sm:w-10/12 md:w-6/12 lg:w-6/12  mr-5">
-        <div className="w-full text-[10px] sm:text-[12px] md:text-[1rem] lg:text-[1rem] text-gray-700">
+        <div
+          className="w-full text-[10px] sm:text-[12px] md:text-[0.7rem] lg:text-[0.9rem] 
+         "
+        >
           {faqs
             ? faqs.map((faq, index) => (
                 <Accordion
@@ -42,7 +45,8 @@ const Faq = () => {
                   sx={{
                     margin: 0,
                     backgroundColor: "transparent",
-                    color: "gray-800",
+                    fontWeight: "700",
+                    color: "#555",
                   }}
                 >
                   <AccordionSummary
@@ -52,10 +56,16 @@ const Faq = () => {
                   >
                     {faq.question}
                   </AccordionSummary>
-                  <AccordionDetails>{faq.answer}</AccordionDetails>
+                  <AccordionDetails
+                    sx={{
+                      fontWeight: "600",
+                    }}
+                  >
+                    {faq.answer}
+                  </AccordionDetails>
                 </Accordion>
               ))
-            : ""}
+            : <h2>Faq</h2>}
         </div>
       </div>
     </div>

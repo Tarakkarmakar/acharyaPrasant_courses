@@ -127,7 +127,7 @@ const SantBani = () => {
               className="text-gray-500 text-[0.6rem] sm:text-[0.7rem] md:text-[0.8rem] 
             lg:text-[0.9rem]"
             >
-              Contribution:{course.amount}
+              Contribution:Rs.{course.amount}
             </span>
             <div
               className="flex w-10 h-6 text-[12px] items-center bg-[#c7e6f8] rounded-md 

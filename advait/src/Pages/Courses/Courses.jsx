@@ -3,9 +3,9 @@ import Banner from "../../Components/NewYearBanner/Banner";
 import SearchVideo from "../../Components/VideoSearch_sec/SearchVideo";
 import SantBani from "../../Components/SantBani_sec/SantBani";
 import Faq from "../../Components/Faq/Faq";
+import Footer from "../../Components/Footer/Footer";
 
-const Courses = ({ isDrawerOpen, closeDrawer }) => {
-  console.log(isDrawerOpen);
+const Courses = () => {
   return (
     <div className="flex flex-col">
       <Banner />
@@ -13,7 +13,8 @@ const Courses = ({ isDrawerOpen, closeDrawer }) => {
       <SearchVideo />
 
       <SantBani />
-   <Faq />
+      <Faq />
+      <Footer />
     </div>
   );
 };
